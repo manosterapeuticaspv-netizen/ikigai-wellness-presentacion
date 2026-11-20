@@ -25,7 +25,7 @@ function go(n){
  document.querySelectorAll('.art video').forEach(v=>{v.pause();v.removeAttribute('src');v.load();});
  i=(n+slides.length)%slides.length;let a=slides[i];
  document.getElementById('tag').textContent=a[0];document.getElementById('title').textContent=a[1];document.getElementById('body').textContent=a[2];document.getElementById('count').textContent=(i+1)+' / '+slides.length;
- document.getElementById('intro').textContent=i===0?"Gracias por su tiempo. En Ikigai Wellness llevamos servicios de salud ocupacional a su empresa para ayudar a prevenir lesiones y atender molestias físicas durante la jornada laboral.":'';
+ document.getElementById('intro').textContent=i===0?"En Ikigai Wellness llevamos servicios de salud ocupacional a su empresa para ayudar a prevenir lesiones y atender molestias físicas durante la jornada laboral.":'';
  
  const art=document.querySelector('.art');art.replaceChildren();art.hidden=!a[4].length&&!a[5].length;art.closest('.stage').classList.toggle('text-only',art.hidden);art.style.cssText='display:flex;justify-content:center;align-items:center;padding:8px';
  for(const key of a[4]){let el=document.createElement('img');el.src=assets[key];el.alt=a[1];el.style.cssText='width:100%;max-height:100%;min-height:0;object-fit:contain;border-radius:14px;flex:1 1 40%';if(i===4)el.style.cssText='width:100%;max-height:65vh;object-fit:contain;border-radius:14px';art.appendChild(el)}
