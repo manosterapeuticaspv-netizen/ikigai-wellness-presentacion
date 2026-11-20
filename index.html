@@ -1,6 +1,6 @@
 <!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Ikigai Wellness | Presentación comercial</title><style>
 :root{--navy:#071e35;--navy2:#123b5b;--gold:#d7b56a;--white:#f6f8fb}*{box-sizing:border-box}body{margin:0;background:#061626;color:var(--white);font-family:Arial,Helvetica,sans-serif}header{height:70px;display:flex;align-items:center;justify-content:space-between;padding:0 5vw;border-bottom:1px solid #ffffff22}header strong{letter-spacing:2px;color:var(--gold)}header span{font-size:12px;color:#b8c8d5}.stage{min-height:calc(100vh - 150px);display:grid;grid-template-columns:1fr 0.8fr;align-items:center;gap:5vw;padding:5vw 8vw;background:radial-gradient(circle at 80% 35%,#164b69 0%,transparent 40%),linear-gradient(130deg,#071b31,#102b43)}.eyebrow{color:var(--gold);font-size:14px;letter-spacing:4px;font-weight:bold}h1{font-size:clamp(36px,5vw,76px);line-height:1.08;margin:22px 0;max-width:800px}p{font-size:clamp(17px,1.7vw,25px);line-height:1.6;color:#d7e2ea;max-width:750px}.art{height:340px;border:1px solid #d7b56a66;border-radius:26px;display:flex;align-items:center;justify-content:center;position:relative;background:linear-gradient(135deg,#123e5b,#07192b);box-shadow:0 30px 80px #0006}.art:before{content:'+';font-size:220px;font-weight:100;color:#d7b56a24}.art span{position:absolute;bottom:30px;letter-spacing:4px;color:var(--gold);font-size:14px}nav{min-height:80px;display:flex;gap:12px;align-items:center;justify-content:center;flex-wrap:wrap;padding:12px}button,a.cta{border:1px solid #d7b56a;background:transparent;color:#f6f8fb;padding:12px 18px;border-radius:8px;cursor:pointer;font-weight:bold;text-decoration:none}button:hover,a.cta:hover{background:#d7b56a;color:#061626}.count{color:#b8c8d5;min-width:70px;text-align:center}.audio{margin-top:22px;max-width:360px;width:100%}.quick{position:fixed;right:20px;top:85px;display:flex;gap:5px;flex-wrap:wrap;justify-content:end;max-width:400px}.quick button{font-size:11px;padding:7px 9px;background:#071e35e8}.foot{font-size:12px;color:#9db2c1;margin-top:20px}@media(max-width:800px){.stage{grid-template-columns:1fr;padding:70px 7vw 25px}.art{height:160px}.art:before{font-size:100px}.quick{position:static;padding:10px;max-width:none}.stage{min-height:70vh}}
-.art:before{display:none!important}.art{overflow:hidden;padding:0;background:#071e35}.art img{display:block}video{background:#071e35}.stage.text-only{grid-template-columns:minmax(0,1fr)}.stage.text-only .art{display:none!important}#intro:empty{display:none}.art{height:auto;min-width:0}.art img{max-height:65vh!important}@media(max-width:800px){.stage{padding-top:32px}.art img{max-height:45vh!important}}</style></head><body><header><strong>IKIGAI WELLNESS</strong><span>S.A.S. de C.V. · Programa corporativo</span></header><main class="stage"><section><div class="eyebrow" id="tag"></div><h1 id="title"></h1><p id="body"></p><p id="intro"></p><div class="foot" id="note"></div></section><div class="art"><span>PREVENCIÓN · ATENCIÓN · RENDIMIENTO</span></div></main><nav><button id="narration" type="button" hidden>Escuchar narración</button><span id="voice-status" role="status"></span><span class="count" id="count"></span><a class="cta" href="https://wa.me/523223227029?text=Hola%2C%20quiero%20conocer%20el%20programa%20corporativo%20de%20Ikigai%20Wellness" target="_blank">Solicitar propuesta por WhatsApp</a></nav><script>
+.art:before{display:none!important}.art{overflow:hidden;padding:0;background:#071e35}.art img{display:block}video{background:#071e35}.stage.text-only{grid-template-columns:minmax(0,1fr)}.stage.text-only .art{display:none!important}#intro:empty{display:none}.art{height:auto;min-width:0}.art img{max-height:65vh!important}@media(max-width:800px){.stage{padding-top:32px}.art img{max-height:45vh!important}}</style></head><body><header><strong>IKIGAI WELLNESS</strong><span>S.A.S. de C.V. · Programa corporativo</span></header><main class="stage"><section><div class="eyebrow" id="tag"></div><h1 id="title"></h1><p id="body"></p><p id="intro"></p><div class="foot" id="note"></div></section><div class="art"><span>PREVENCIÓN · ATENCIÓN · RENDIMIENTO</span></div></main><nav><button id="narration" type="button" hidden>Escuchar narración</button><span id="voice-status" role="status"></span><span class="count" id="count"></span><button id="next-slide" type="button">Siguiente →</button><a class="cta" href="https://wa.me/523223227029?text=Hola%2C%20quiero%20conocer%20el%20programa%20corporativo%20de%20Ikigai%20Wellness" target="_blank">Solicitar propuesta por WhatsApp</a></nav><script>
 const embeddedImages=['medios/recurso_01.png', 'medios/recurso_02.jpg', 'medios/recurso_03.png', 'medios/recurso_04.png', 'medios/recurso_05.jpg', 'medios/recurso_06.png'];
 const assets={"10":"medios/diapositiva-10.webp","11":"medios/diapositiva-11.webp","portada":"medios/recurso_08.png","02":"medios/diapositiva-02.webp","03":"medios/diapositiva-03.webp","04":"medios/diapositiva-04.webp","05":"medios/diapositiva-05-v2.webp","06":"medios/diapositiva-06.webp","07":"medios/diapositiva-07.webp","08":"medios/diapositiva-08.webp","09":"medios/diapositiva-09-v2.webp"};
 
@@ -103,6 +103,7 @@ function playPiano(closing = false){
 function playSlide(index){
   clearTimeout(timer);
   go(index);
+  nextSlide.disabled = index === slides.length - 1;
   const slide = slides[index];
   const intro = document.getElementById('intro').textContent;
   const text = (index === 0 ? [slide[1], intro] : [slide[1], slide[2]]).join('. ');
@@ -138,36 +139,82 @@ function playSlide(index){
     narration.textContent = 'Escuchar narración';
     timer = setTimeout(advance, delay);
   }
-  speech.onerror = continueSilently;
+  speech.onerror = event => {
+    if(activeSpeech === speech && event.error === 'not-allowed'){
+      status.textContent = 'Pulsa Escuchar narración para activar el audio.';
+    }
+    continueSilently();
+  };
   timer = setTimeout(continueSilently, delay + 15000);
   synth.speak(speech);
 }
 
-if(synth && 'SpeechSynthesisUtterance' in window){
+const nextSlide = document.getElementById('next-slide');
+const status = document.getElementById('voice-status');
+const supportsNarration = synth && 'SpeechSynthesisUtterance' in window;
+let autoPending = Boolean(supportsNarration);
+
+function stopCurrentAudio(){
+  clearTimeout(timer);
+  activeSpeech = undefined;
+  if(synth) synth.cancel();
+  stopMusic();
+}
+
+function startNarration(index){
+  stopCurrentAudio();
+  reading = true;
+  narration.textContent = 'Silenciar narración';
+  go(index);
+  nextSlide.disabled = index === slides.length - 1;
+  const introDuration = index === 0 ? playPiano() : 0;
+  if(introDuration && musicContext.state === 'running'){
+    timer = setTimeout(() => playSlide(index), introDuration);
+  } else if(introDuration && navigator.userActivation?.hasBeenActive){
+    timer = setTimeout(() => playSlide(index), introDuration);
+  } else {
+    stopMusic();
+    playSlide(index);
+  }
+}
+
+nextSlide.addEventListener('click', () => {
+  autoPending = false;
+  if(i >= slides.length - 1) return;
+  stopCurrentAudio();
+  playSlide(i + 1);
+});
+playSlide(0);
+
+if(supportsNarration){
   narration.hidden = false;
   narration.addEventListener('click', () => {
-    const status = document.getElementById('voice-status');
+    autoPending = false;
     status.textContent = '';
-    if(!reading){
-      voice = preferredVoice(synth.getVoices());
-      if(!voice){
-        status.textContent = 'Este navegador no ofrece una voz femenina en español para la narración.';
-        return;
-      }
-    }
-    activeSpeech = undefined;
-    synth.cancel();
-    reading = !reading;
-    narration.textContent = reading ? 'Silenciar narración' : 'Escuchar narración';
-    clearTimeout(timer);
-    stopMusic();
     if(reading){
-      go(0);
-      const introDuration = playPiano();
-      if(introDuration) timer = setTimeout(() => playSlide(0), introDuration);
-      else playSlide(0);
-    } else playSlide(i);
+      stopCurrentAudio();
+      reading = false;
+      narration.textContent = 'Escuchar narración';
+      playSlide(i);
+      return;
+    }
+    voice = preferredVoice(synth.getVoices());
+    if(!voice){
+      status.textContent = 'Este navegador no ofrece una voz femenina en español para la narración.';
+      return;
+    }
+    startNarration(narration.textContent === 'Escuchar de nuevo' ? 0 : i);
   });
+
+  function tryAutoplay(){
+    if(!autoPending || i !== 0) return;
+    voice = preferredVoice(synth.getVoices());
+    if(!voice) return;
+    autoPending = false;
+    synth.removeEventListener('voiceschanged', tryAutoplay);
+    startNarration(0);
+  }
+  synth.addEventListener('voiceschanged', tryAutoplay);
+  tryAutoplay();
 }
-playSlide(0);
 </script></body></html>
